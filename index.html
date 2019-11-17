@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Duplicate Finder</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6">
+            <div class="input-field">
+                <input id="numberlist" name="numberlist" type="text" class="validate" onkeyup="detectKeyPress()">
+                <label for="numberlist">Enter Numbers/Range to Find Duplicates. Use Comma ' , ' to seperate
+                    numbers</label>
+                <span class="text-danger" id="errorblk"></span>
+            </div>
+            <div class="output" id="output">
+                <ul class="collapsible">
+                    <li class="active">
+                        <div class="collapsible-header text-danger">Duplicates</div>
+                        <div class="collapsible-body"><span id="duplicatelist"></span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header text-success">Unique List</div>
+                        <div class="collapsible-body"><span id="uniquelist"></span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col s3"></div>
+        <!-- <div class="output">
+            <div class="duplicates" style="background: green;">
+                <p id="duplicatelist"></p>
+            </div>
+            <div class="uniques" style="background:red;">
+                <p id="uniquelist"></p>
+            </div>
+        </div> -->
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
